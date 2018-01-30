@@ -1,0 +1,5 @@
+bin/*.dll
+bin/*.exp
+obj/*
+*.db
+*.opendb
