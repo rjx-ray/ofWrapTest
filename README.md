@@ -17,3 +17,5 @@ wrap speed can be changed with w/W keys
 
 image can be loaded by dragging and dropping
 
+The app saves its setting on exit, or with the f key. It loads them on start up
+
