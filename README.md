@@ -1,7 +1,7 @@
 # ofWrapTest
 A simple test program to illustrate stuttering when wrapping
 
-Project built in openFrameworks 0.9.8n release with VS2015.
+Project built in openFrameworks 0.9.8 release with VS2015.
 
 Loads a simple image and scrolls it around the window.
 
