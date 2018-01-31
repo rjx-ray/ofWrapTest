@@ -1,10 +1,11 @@
 <settings>
     <FullScreen>0</FullScreen>
-    <wrapRate>0.099999994</wrapRate>
+    <wrapRate>0.100000001</wrapRate>
     <winWidth>9600</winWidth>
     <winXPos>1920</winXPos>
-    <fps>21</fps>
+    <fps>0</fps>
     <vsync>1</vsync>
+    <fullScreen>0</fullScreen>
     <useSubsection>0</useSubsection>
     <fileName>C:\Igloo\Content\20170115_103555.jpg</fileName>
 </settings>

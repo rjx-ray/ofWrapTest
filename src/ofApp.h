@@ -25,6 +25,7 @@ class ofApp : public ofBaseApp{
 		float measuredFps;
 		float ofFps;
 		bool vsync = false;
+		bool fullScreen = false;
 
 		bool useSubsection = false;
 

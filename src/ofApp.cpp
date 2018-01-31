@@ -22,6 +22,7 @@ void ofApp::setup() {
 	outputFBO.allocate(fboSettings);
 
 	loaded = currentImage.load(fileName);
+	if (fullScreen) ofSetFullscreen(fullScreen);
 
 	accumulateStartTime = ofGetElapsedTimef();
 	lastDrawTime = ofGetElapsedTimef();
@@ -92,6 +93,7 @@ bool ofApp::loadSettings() {
 		winXPos = settings.getValue("settings:winXPos", 0);
 		setFPS = settings.getValue("settings:fps", 120);
 		vsync = settings.getValue("settings:vsync", false);
+		fullScreen = settings.getValue("settings:fullScreen", false);
 		useSubsection = settings.getValue("settings:useSubsection", true);
 		fileName = settings.getValue("settings:fileName", "20170115_103555.jpg");
 		return true;
@@ -107,6 +109,7 @@ bool ofApp::saveSettings() {
 	settings.setValue("settings:winXPos", winXPos);
 	settings.setValue("settings:fps", setFPS);
 	settings.setValue("settings:vsync", vsync);
+	settings.setValue("settings:fullScreen", fullScreen);
 	settings.setValue("settings:useSubsection", useSubsection);
 	settings.setValue("settings:fileName", fileName);
 	return settings.saveFile("Settings.xml");
@@ -125,6 +128,7 @@ void ofApp::keyPressed(int key) {
 		case 'f': setFPS--; ofSetFrameRate(setFPS); break;
 		case 'W': wrapRate = wrapRate + 0.01; break;
 		case 'w': wrapRate = wrapRate - 0.01; break;
+		case 'k': fullScreen = !fullScreen; ofSetFullscreen(fullScreen);
 		case 's': saveSettings();
 	}
 }
